@@ -28,4 +28,8 @@ export default class Haiku {
     let line2Array = this.line2.match(/[aeiouy]/gi);
     return line2Array;
   }
+
+  line3Count() {
+    
+  }
 };

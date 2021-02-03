@@ -18,6 +18,11 @@ test("it should return an array of vowels from a string", () => {
     const haiku = new Haiku("","Hello","");
     expect(haiku.line2Count()).toEqual(["e","o"]);
   });
+
+  test("it should return an array of vowels from a string", () => {
+    const haiku = new Haiku("","","Hello");
+    expect(haiku.line3Count()).toEqual(["e","o"]);
+  });
 });
 
 
