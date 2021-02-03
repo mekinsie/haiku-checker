@@ -13,5 +13,14 @@ test("it should return an array of vowles from a string", () => {
     const haiku = new Haiku("Hello","","");
     expect(haiku.vowelCheck()).toEqual(["e","o"]);
   });
+
+  test("it should return an array of vowles from a string", () => {
+    const haiku = new Haiku("","Hello","");
+    expect(haiku.vowelCheck()).toEqual(["e","o"]);
+  });
+
 });
 
+
+// test("it should return the number of elements in an array", () => {
+//   expect(haiku.vowel)
