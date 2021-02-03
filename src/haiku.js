@@ -30,6 +30,7 @@ export default class Haiku {
   }
 
   line3Count() {
-    
+    let line3Array = this.line3.match(/[aeiouy]/gi);
+    return line3Array;
   }
 };
