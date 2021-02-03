@@ -19,5 +19,5 @@ export default function Haiku(line1, line2, line3) {
 }
 
 Haiku.prototype.vowelCheck = function() {
-
+  return false
 };
