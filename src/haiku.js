@@ -19,10 +19,13 @@ export default class Haiku {
     this.line3 = line3;
   }
 
-  vowelCheck() {
-    let vowelArray = this.line1.match(/[aeiouy]/gi);
-    return vowelArray;
+  line1Count() {
+    let line1Array = this.line1.match(/[aeiouy]/gi);
+    return line1Array;
+  }
+
+  line2Count() {
+    let line2Array = this.line2.match(/[aeiouy]/gi);
+    return line2Array;
   }
 };
-
-
