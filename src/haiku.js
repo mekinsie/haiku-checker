@@ -12,12 +12,17 @@
 
 // If 2 consonants are together they get split, except when they are put together for a single sound (ie: th, ph, ng)
 
-export default function Haiku(line1, line2, line3) {
-  this.line1 = line1;
-  this.line2 = line2;
-  this.line3 = line3;
-}
+export default class Haiku {
+  constructor(line1, line2, line3) {
+    this.line1 = line1;
+    this.line2 = line2;
+    this.line3 = line3;
+  }
 
-Haiku.prototype.vowelCheck = function() {
-  return false
+  vowelCheck() {
+    let vowelArray = this.line1.match(/[aeiouy]/gi);
+    return vowelArray;
+  }
 };
+
+
