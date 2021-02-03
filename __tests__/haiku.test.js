@@ -23,7 +23,12 @@ test("it should return an array of vowels from a string", () => {
     const haiku = new Haiku("","","Hello");
     expect(haiku.line3Count()).toEqual(["e","o"]);
   });
-});
+
+  test("it should give a count for the vowels in an array", () => {
+    const haiku = new Haiku("Hello","","")
+    expect(haiku.line1Count()).toEqual("2");
+  });
+})
 
 
 // test("it should return the number of elements in an array", () => {
