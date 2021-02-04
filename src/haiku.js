@@ -5,47 +5,47 @@ export default class Haiku {
     this.line3 = line3;
   }
 
-  line1Count() {
-    let firstString = `${this.line1} `;
-    firstString = firstString.replace(/\W/g," ");
-    let line1Array = firstString.match(/[aeiouy]/gi);
-    let line1Syl = line1Array.length;
+  // line1Count() {
+  //   let firstString = `${this.line1} `;
+  //   firstString = firstString.replace(/\W/g," ");
+  //   let line1Array = firstString.match(/[aeiouy]/gi);
+  //   let line1Syl = line1Array.length;
 
-    line1Array = firstString.match(/\w{2}e\s+/gi);
-    line1Syl -= line1Array.length;
+  //   line1Array = firstString.match(/\w{2}e\s+/gi);
+  //   line1Syl -= line1Array.length;
 
-    line1Array = firstString.match(/[aeiouy]{2}/gi);
-    line1Syl -= line1Array.length;
+  //   line1Array = firstString.match(/[aeiouy]{2}/gi);
+  //   line1Syl -= line1Array.length;
 
-    line1Array = firstString.match(/[aeiouy]{3}/gi);
-    line1Syl -= line1Array.length;
+  //   line1Array = firstString.match(/[aeiouy]{3}/gi);
+  //   line1Syl -= line1Array.length;
 
-    line1Array = firstString.match(/[^aeiouy]+le\s+/gi);
-    line1Syl += line1Array.length;
+  //   line1Array = firstString.match(/[^aeiouy]+le\s+/gi);
+  //   line1Syl += line1Array.length;
 
-    return line1Syl;
-  }
+  //   return line1Syl;
+  // }
 
-  line2Count() {
-    let secondString = `${this.line2} `;
-    secondString = secondString.replace(/\W/g," ");
-    let line2Array = secondString.match(/[aeiouy]/gi);
-    let line2Syl = line2Array.length;
+  // line2Count() {
+  //   let secondString = `${this.line2} `;
+  //   secondString = secondString.replace(/\W/g," ");
+  //   let line2Array = secondString.match(/[aeiouy]/gi);
+  //   let line2Syl = line2Array.length;
 
-    line2Array = secondString.match(/\w{2}e\s+/gi);
-    line2Syl -= line2Array.length;
+  //   line2Array = secondString.match(/\w{2}e\s+/gi);
+  //   line2Syl -= line2Array.length;
 
-    line2Array = secondString.match(/[aeiouy]{2}/gi);
-    line2Syl -= line2Array.length;
+  //   line2Array = secondString.match(/[aeiouy]{2}/gi);
+  //   line2Syl -= line2Array.length;
 
-    line2Array = secondString.match(/[aeiouy]{3}/gi);
-    line2Syl -= line2Array.length;
+  //   line2Array = secondString.match(/[aeiouy]{3}/gi);
+  //   line2Syl -= line2Array.length;
 
-    line2Array = secondString.match(/[^aeiouy]+le\s+/gi);
-    line2Syl += line2Array.length;
+  //   line2Array = secondString.match(/[^aeiouy]+le\s+/gi);
+  //   line2Syl += line2Array.length;
 
-    return line2Syl;
-  }
+  //   return line2Syl;
+  // }
 
   line3Count() {
     let thirdString = `${this.line3} `;
@@ -53,18 +53,22 @@ export default class Haiku {
     let line3Array = thirdString.match(/[aeiouy]/gi);
     let line3Syl = line3Array.length;
 
-    line3Array = thirdString.match(/\w{2}e\s+/gi);
-    line3Syl -= line3Array.length;
-
-    line3Array = thirdString.match(/[aeiouy]{2}/gi);
-    line3Syl -= line3Array.length;
-
-    line3Array = thirdString.match(/[aeiouy]{3}/gi);
-    line3Syl -= line3Array.length;
-
-    line3Array = thirdString.match(/[^aeiouy]+le\s+/gi);
-    line3Syl += line3Array.length;
-
+    if (thirdString.match(/\w{2}e\s+/gi) != null) {
+      line3Array = thirdString.match(/\w{2}e\s+/gi)
+      line3Syl -= line3Array.length;
+    }
+    if (thirdString.match(/[aeiouy]{2}/gi) != null) {
+      line3Array = thirdString.match(/[aeiouy]{2}/gi);
+      line3Syl -= line3Array.length;
+    }  
+    if (thirdString.match(/[aeiouy]{3}/gi) != null) {
+      line3Array = thirdString.match(/[aeiouy]{3}/gi);
+      line3Syl -= line3Array.length;
+    }  
+    if (thirdString.match(/[^aeiouy]+le\s+/gi) != null) {
+      line3Array = thirdString.match(/[^aeiouy]+le\s+/gi);
+      line3Syl += line3Array.length;
+    }
     return line3Syl;
   }
 };
