@@ -32,7 +32,7 @@ export default class Haiku {
   }
 
   haikuChecker() {
-  
+    return false;
   }
 };
 
