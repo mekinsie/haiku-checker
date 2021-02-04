@@ -20,19 +20,45 @@ export default class Haiku {
   }
 
   line1Count() {
-    let line1Array = this.line1.match(/[aeiouy]/gi);
+    let firstString = `${this.line1} `;
+    firstString = firstString.replace(/\W/g," ");
+    let line1Array = firstString.match(/[aeiouy]/gi);
     let line1Syl = line1Array.length;
+    
+    line1Array = firstString.match(/\w{2}e\s+/gi);
+    line1Syl -= line1Array.length;
+
+    line1Array = firstString.match(/[aeiouy]{2}/gi);
+    line1Syl -= line1Array.length;
+
+    line1Array = firstString.match(/[aeiouy]{3}/gi);
+    line1Syl -= line1Array.length;
+
+    line1Array = firstString.match(/[^aeiouy]+le\s+/gi);
+    line1Syl += line1Array.length;
+
     return line1Syl;
-  }
-
-  line2Count() {
-    let line2Array = this.line2.match(/[aeiouy]/gi);
-    return line2Array;
-  }
-
-  line3Count() {
-    let line3Array = this.line3.match(/[aeiouy]/gi);
-    return line3Array;
   }
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+// line2Count() {
+//   let line2Array = this.line2.match(/[aeiouy]/gi);
+//   return line2Array;
+// }
+
+// line3Count() {
+//   let line3Array = this.line3.match(/[aeiouy]/gi);
+//   return line3Array;
+// }
