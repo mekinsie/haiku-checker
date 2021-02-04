@@ -28,7 +28,12 @@ test("should correctly create a haiku object with three keys", () => {
   });
 
   test("should pass each line through syllableCounter to determine if it is a haiku", () => {
-    const haiku = new Haiku("Hello please, count my stale beautiful syllable for me","help Im so close","read me"); 
+    let haiku = new Haiku("Hello please, count my stale beautiful syllable for me","help Im so close","read me"); 
     expect(haiku.haikuChecker()).toEqual(false);
+  });
+
+  test("should pass each line through syllableCounter to determine if it is a haiku", () => {
+    let haiku = new Haiku("congratulations","you submitted a haiku","you make me so proud"); 
+    expect(haiku.haikuChecker()).toEqual(true);
   });
 })

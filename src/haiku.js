@@ -5,7 +5,6 @@ export default class Haiku {
     this.line3 = line3;
   }
 
-
   syllableCounter(str) {
     let lineString = `${str} `;
     lineString = lineString.replace(/\W/g," ");
@@ -32,15 +31,14 @@ export default class Haiku {
   }
 
   haikuChecker() {
-    return false;
+    let arrayOfStrings = (Object.values(this));
+    let line1Syl = this.syllableCounter(arrayOfStrings[0]);
+    let line2Syl = this.syllableCounter(arrayOfStrings[1]);
+    let line3Syl = this.syllableCounter(arrayOfStrings[2]);
+    if (line1Syl === 5 && line2Syl === 7 && line3Syl === 5) {
+      return true
+    } else {
+      return false;
+    }
   }
 };
-
-
-
-
-
-    
-
-
-
