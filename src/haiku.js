@@ -48,6 +48,23 @@ export default class Haiku {
   }
 
   line3Count() {
-    
+    let thirdString = `${this.line3} `;
+    thirdString = thirdString.replace(/\W/g," ");
+    let line3Array = thirdString.match(/[aeiouy]/gi);
+    let line3Syl = line3Array.length;
+
+    line3Array = thirdString.match(/\w{2}e\s+/gi);
+    line3Syl -= line3Array.length;
+
+    line3Array = thirdString.match(/[aeiouy]{2}/gi);
+    line3Syl -= line3Array.length;
+
+    line3Array = thirdString.match(/[aeiouy]{3}/gi);
+    line3Syl -= line3Array.length;
+
+    line3Array = thirdString.match(/[^aeiouy]+le\s+/gi);
+    line3Syl += line3Array.length;
+
+    return line3Syl;
   }
 };
