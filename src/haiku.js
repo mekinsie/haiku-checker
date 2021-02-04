@@ -21,7 +21,8 @@ export default class Haiku {
 
   line1Count() {
     let line1Array = this.line1.match(/[aeiouy]/gi);
-    return line1Array;
+    let line1Syl = line1Array.length;
+    return line1Syl;
   }
 
   line2Count() {
@@ -34,3 +35,4 @@ export default class Haiku {
     return line3Array;
   }
 };
+

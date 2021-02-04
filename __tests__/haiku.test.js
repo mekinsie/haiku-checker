@@ -10,13 +10,13 @@ test("should correctly create a haiku object with three keys", () => {
   });
 
 test("it should return an array of vowels from a string", () => {
-    const haiku = new Haiku("Hello","","");
+    const haiku = new Haiku("Hello","hello","hello");
     expect(haiku.line1Count()).toEqual(["e","o"]);
   });
 
   test("it should return an array of vowels from a string", () => {
     const haiku = new Haiku("","Hello","");
-    expect(haiku.line2Count()).toEqual(["e","o"]);
+    expect(haiku.line2Count).toEqual(["e","o"]);
   });
 
   test("it should return an array of vowels from a string", () => {
@@ -26,7 +26,7 @@ test("it should return an array of vowels from a string", () => {
 
   test("it should give a count for the vowels in an array", () => {
     const haiku = new Haiku("Hello","","")
-    expect(haiku.line1Count()).toEqual("2");
+    expect(haiku.line1Count()).toEqual(2);
   });
 })
 
