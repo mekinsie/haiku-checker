@@ -46,4 +46,8 @@ export default class Haiku {
 
     return line2Syl;
   }
+
+  line3Count() {
+    
+  }
 };
