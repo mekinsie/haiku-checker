@@ -31,10 +31,9 @@ export default class Haiku {
     return lineSyl;
   }
 
-
-/* haikuChecker() {
-
-  }*/
+  haikuChecker() {
+  
+  }
 };
 
 
