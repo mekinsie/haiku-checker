@@ -29,10 +29,16 @@ test("should correctly create a haiku object with three keys", () => {
     expect(haiku.line3Count()).toEqual(14);
   });
 
-  test("it should count the syllables in each string of the haikuChecker array", () => {
+  test("it should count the syllables in line1 of the Haiku object", () => {
     const haiku = new Haiku("Hello please, count my stale beautiful syllable for me","","");
     let arrayOfStrings = (Object.values(haiku));
     expect(haiku.syllableCounter(arrayOfStrings[0])).toEqual(14)
+  });
+
+  test("it should count the syllables in line2 of the Haiku object", () => {
+    const haiku = new Haiku("","Hello please, count my stale beautiful syllable for me","");
+    let arrayOfStrings = (Object.values(haiku));
+    expect(haiku.syllableCounter(arrayOfStrings[1])).toEqual(14)
   });
 
   // test("should pass each line through syllableCounter to determine if it is a haiku", () => {
