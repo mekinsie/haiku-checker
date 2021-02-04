@@ -71,4 +71,44 @@ export default class Haiku {
     }
     return line3Syl;
   }
+
+  syllableCounter(str) {
+    let lineString = `${str} `;
+    lineString = lineString.replace(/\W/g," ");
+    let lineArray = lineString.match(/[aeiouy]/gi);
+    let lineSyl = lineArray.length;
+
+    if (lineString.match(/\w{2}e\s+/gi) != null) {
+      lineArray = lineString.match(/\w{2}e\s+/gi)
+      lineSyl -= lineArray.length;
+    }
+    if (lineString.match(/[aeiouy]{2}/gi) != null) {
+      lineArray = lineString.match(/[aeiouy]{2}/gi);
+      lineSyl -= lineArray.length;
+    }  
+    if (lineString.match(/[aeiouy]{3}/gi) != null) {
+      lineArray = lineString.match(/[aeiouy]{3}/gi);
+      lineSyl -= lineArray.length;
+    }  
+    if (lineString.match(/[^aeiouy]+le\s+/gi) != null) {
+      lineArray = lineString.match(/[^aeiouy]+le\s+/gi);
+      lineSyl += lineArray.length;
+    }
+    return lineSyl;
+
+  }
+
+
+/* haikuChecker() {
+
+  }*/
 };
+
+
+
+
+
+    
+
+
+
