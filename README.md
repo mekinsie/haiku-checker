@@ -1,20 +1,27 @@
-# _{Template}_
+# _Haiku Checker_
 
-#### _{Environment Template}_
+#### _Checks user input for haiku rule compliance_
 
-#### By _**Jo Miller**_
+#### By _**Jo Miller & Levi Kohler**_
+
+---
 
 ## Technologies Used
 
 * _HTML_
 * _CSS_
 * _JavaScript_
+* _jQuery_
 * _Jest_
 * _webpack_
 
+---
+
 ## Description
 
-_{This is a template for setting up a development environment.  This is also a template README.}_
+_A haiku is a three line poem with a format of 5 syllables, 7 syllables, 5 syllables. Enter what you think is a haiku in the form and the Haiku Checker will determine if your poem is in haiku format!_
+
+---
 
 ## Setup/Installation Requirements
 
@@ -23,19 +30,21 @@ _{This is a template for setting up a development environment.  This is also a t
 * _$ npm install_
 * _$ npm run build_
 
+---
+
 ## Known Bugs
 
-* _{Any known issues}_
-* _{should go here}_
+* _Syllable Counter is not 100% accurate_
 
-## Specifications
-```
-```
+---
 
 ## License
 
 [MIT](LICENSE.txt)
 
+---
+
 ## Contact Information
 
-_Jo Miller: joannamiller@gmail.com_
+_Jo Miller: joannamiller@gmail.com_ <br>
+_Levi Kohler: kohler.la01@gmail.com_
