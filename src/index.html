@@ -3,9 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Haiku Checker</title>
 </head>
 <body>
-  
+  <div class="container">
+    <h1>Haiku Checker</h1>
+    <hr>
+    <br>
+    <form id="haikuForm" novalidate>
+
+      <label for="userInput">Type in line 1 of your Haiku:</label>
+      <input type="text" class="form-control" id="line1Input">
+      <br>
+      <br>
+
+      <label for="userInput">Type in line 2 of your Haiku:</label>
+      <input type="text" class="form-control" id="line2Input">
+      <br>
+      <br>
+
+      <label for="userInput">Type in line 3 of your Haiku:</label>
+      <input type="text" class="form-control" id="line3Input">
+      <br>
+      <br>
+
+      <button type="submit" class="btn btn-primary">Haiku Check!</button>
+    </form>
+
+    <p id="isHaiku">Congratulations!
+      <br>
+      you submitted a Haiku
+      <br>
+      you make me so proud
+    </p>
+
+    <p id="notHaiku">Better luck next time <br>Count seventeen syllables<br>And then try again</p>
+  </div>
 </body>
 </html>

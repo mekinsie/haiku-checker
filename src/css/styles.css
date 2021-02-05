@@ -1,0 +1,15 @@
+#output {
+  display: none;
+}
+
+#isHaiku {
+  display: none;
+}
+
+#notHaiku {
+  display: none;
+}
+
+.btn {
+  margin-bottom: 20px;
+}
