@@ -2,7 +2,7 @@
 
 #### _Checks user input for haiku rule compliance_
 
-#### By _**Jo Miller & Levi Kohler**_
+#### By _**Jo Miller, Levi Kohler, Dani Renner, Mekinsie Callahan**_
 
 ---
 
@@ -16,10 +16,13 @@
 * _webpack_
 
 ---
+### _This project was created solely for the education of the author(s) and is not in a complete or portfolio-ready state. It should not be considered representative of professional work._
 
 ## Description
 
-_A haiku is a three line poem with a format of 5 syllables, 7 syllables, 5 syllables. Enter what you think is a haiku in the form and the Haiku Checker will determine if your poem is in haiku format!_
+A haiku is a three line poem with a format of 5 syllables, 7 syllables, 5 syllables. Enter what you think is a haiku in the form and the Haiku Checker will determine if your poem is in haiku format!
+
+The purpose of this app is to practice using functional programming with JavaScript.
 
 ---
 
@@ -35,6 +38,7 @@ _A haiku is a three line poem with a format of 5 syllables, 7 syllables, 5 sylla
 ## Known Bugs
 
 * _Syllable Counter is not 100% accurate_
+* _Front end currently under construction_
 
 ---
 
@@ -47,4 +51,6 @@ _A haiku is a three line poem with a format of 5 syllables, 7 syllables, 5 sylla
 ## Contact Information
 
 _Jo Miller: joannamiller@gmail.com_ <br>
-_Levi Kohler: kohler.la01@gmail.com_
+_Levi Kohler: kohler.la01@gmail.com_ <br>
+_Dani Renner: danijrenner@gmail.com_ <br>
+_Mekinsie Callahan: mekinsie.aja@gmail.com_
